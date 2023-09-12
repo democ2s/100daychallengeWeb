@@ -1,2 +1,2 @@
 # HTML Portfolio
-Sample Portfolio of HTMl projects - Working on Bootcamp files by Angela
+Sample Portfolio of HTML projects - Working on Bootcamp files by Angela
