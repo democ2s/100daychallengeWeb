@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Random color code generator with Sample display</title>
+  <style>
+    body {
+      background-color: antiquewhite;
+    }
+
+    #outer-div {
+      width: 60%;
+      margin: auto;
+    }
+
+    #ctrl-panel {
+      margin: auto;
+      float: left;
+      text-align: center;
+    }
+
+    #outer-disp-panel {
+      height: 250px;
+      float: right;
+    }
+
+    #disp-panel {
+      border-radius: 10%;
+      height: 250px;
+      min-height: 500px !important;
+      width: 400px;
+    }
+
+    #hex-code {
+      position: relative;
+      left: 50px;
+      top: 50px;
+    }
+
+    #rgb-panel {
+      position: relative;
+      left: 50px;
+      top: 50px;
+    }
+
+    #ctrl-panel h2 {
+      position: relative;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="outer-div">
+    <div id="ctrl-panel">
+      <h1>Random Hex code generator with sample color</h1>
+      <p>
+        Manual:
+        <button id="btn-manual" onclick="btnClicked('btn-manual')">
+          Generate
+        </button>
+      </p>
+      <p>
+        Auto:
+        <button id="start" onclick="btnClicked('btn-start')">Start</button>
+        <button id="stop" onclick="btnClicked('btn-stop')">Stop</button>
+      </p>
+    </div>
+    <div id="outer-disp-panel">
+      <div id="disp-panel">
+        <h2 id="hex-code"></h2>
+        <div id="rgb-panel">
+          <h3 id="r-compo"></h3>
+          <h3 id="g-compo"></h3>
+          <h3 id="b-compo"></h3>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+<script>
+  let flgStart = false;
+  function btnClicked(btnparam) {
+    if (btnparam === "btn-start") {
+      flgStart = true;
+      genHexcode();
+      // alert("Start button clicked");
+    } else if (btnparam === "btn-stop") {
+      flgStart = false;
+      // alert("Stop button clicked");
+    } else {
+      console.log("Manual Generation");
+      genHexcode();
+    }
+  }
+
+  function genHexcode() {
+    let letters = "0123456789ABCDEF";
+    let color = "#";
+    for (let i = 0; i < 6; i++)
+      color += letters[Math.floor(Math.random() * 16)];
+    document.getElementById("disp-panel").style.backgroundColor = color;
+    document.getElementById("hex-code").innerText = "Hex code:" + color;
+    calcRGB(color);
+    if (flgStart) {
+      setTimeout(genHexcode, 2000);
+    }
+  }
+
+  function calcRGB(color) {
+    let r = color[1] + color[2];
+    let g = color[3] + color[4];
+    let b = color[5] + color[6];
+
+    let rDec = parseInt(r, 16);
+    let gDec = parseInt(g, 16);
+    let bDec = parseInt(b, 16);
+
+    document.getElementById("r-compo").innerText =
+      "R: " + Math.floor((rDec / 255) * 100) + " % ";
+    document.getElementById("g-compo").innerText =
+      "G: " + Math.floor((gDec / 255) * 100) + " % ";
+    document.getElementById("b-compo").innerText =
+      "B: " + Math.floor((bDec / 255) * 100) + " % ";
+  }
+</script>
+
+</html>
