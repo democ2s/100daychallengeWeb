@@ -73,6 +73,37 @@
       height: 200px;
       background-color: blue;
     }
+
+    /* settings for float example */
+     .float-left {
+      float: left;
+      margin-right: 10px;
+    }
+
+    .highlight-content {
+      font-style: italic;
+      font-weight: bold;
+    }
+
+
+    .float-right {
+      float: right;
+    }
+
+    .footer {
+      height: 50px;
+      background-color: blanchedalmond;
+      clear: both;
+      text-align: center;
+      font-size: larger;
+    }
+
+
+    footer {
+      text-align: center;
+      background-color: blueviolet;
+      clear: both
+    }
   </style>
 </head>
 
@@ -117,6 +148,78 @@
   <div class="red-mod-ver">Red Paragraph </div>
   <div class="green-mod-ver">Green Paragraph</div>
   <div class="blue-mod-ver">Blue Paragraph</div>
+
+  <br />
+  <br />
+
+  <img class="float-left" src="https://picsum.photos/id/237/200/300" alt="">
+  <p class="highlight-content">
+    The image is pushed to the left and this and below text block is wrapped around the image because of 'float:left'
+    property set
+    to the image. As image and p elements are by default block level elements, it would've displayed one below the other
+    occupying the entire width of the display, hence using float property.
+  </p>
+  <p>
+
+    Bro ipsum dolor sit amet bump whip rock-ectomy, bomb jib bro chillax wheelie drop face plant dope afterbang road
+    rash
+    stoked shuttle piste. Mute schwag yard sale back country, greasy pow pow 360. Pipe brain bucket smear reverse
+    camber,
+    steed gapers misty schwag death cookies fully. Couloir betty table top punter huck Whistler cornice gondy Skate drop
+    wheels.
+    Bro ipsum dolor sit amet bump whip rock-ectomy, bomb jib bro chillax wheelie drop face plant dope afterbang road
+    rash
+    stoked shuttle piste. Mute schwag yard sale back country, greasy pow pow 360. Pipe brain bucket smear reverse
+    camber,
+    steed gapers misty schwag death cookies fully. Couloir betty table top punter huck Whistler cornice gondy Skate drop
+    wheels.
+    Hot dogging slash bonk stomp drop bowl grind. Ripper BB huckfest stoked sketching white room single track couloir
+    air
+    tele acro chowder misty twin tip. Huck reverse camber rig dope hot dogging chillax. Death cookies ride stoked
+    backside.
+    Gapers epic huck method. Pow pow brain bucket gaper Bike.
+  </p>
+  <p>
+    Hot dogging slash bonk stomp drop bowl grind. Ripper BB huckfest stoked sketching white room single track couloir
+    air
+    tele acro chowder misty twin tip. Huck reverse camber rig dope hot dogging chillax. Death cookies ride stoked
+    backside.
+    Gapers epic huck method. Pow pow brain bucket gaper Bike.
+    Bro ipsum dolor sit amet bump whip rock-ectomy, bomb jib bro chillax wheelie drop face plant dope afterbang road
+    rash
+    stoked shuttle piste. Mute schwag yard sale back country, greasy pow pow 360. Pipe brain bucket smear reverse
+    camber,
+    steed gapers misty schwag death cookies fully. Couloir betty table top punter huck Whistler cornice gondy Skate drop
+    wheels.
+  </p>
+  <img src="https://picsum.photos/id/237/200/300" class="float-right" alt="">
+  <p class="highlight-content">
+    The image is pushed to the right and this and below text block is wrapped around the image because of 'float:right'
+    property set to the image. As image and p elements are by default block level elements, it would've displayed one
+    below the other occupying the entire width of the display, hence using float property.
+  </p>
+  <p>
+    Fully dirt skid shuttle afterbang ripper park couloir tele spin couloir. Twin tip grab McTwist rock-ectomy apres
+    carbon.
+    Wheels noodle gnar, bear trap schwag death cookies brain bucket epic single track Ski. Derailleur line smear slash
+    mute
+    line flow. Bomb hole brain bucket deck white room.
+    Hot dogging slash bonk stomp drop bowl grind. Ripper BB huckfest stoked sketching white room single track couloir
+    air
+    tele acro chowder misty twin tip. Huck reverse camber rig dope hot dogging chillax. Death cookies ride stoked
+    backside.
+    Gapers epic huck method. Pow pow brain bucket gaper Bike.air
+    tele acro chowder misty twin tip. Huck reverse camber rig dope hot dogging chillax. Death cookies ride stoked
+    backside.
+    Gapers epic huck method. Pow pow brain bucket gaper Bike.
+  </p>
+  <div class="footer">
+    <p class="highlight-content">
+      As we have floated two images, the footer by default pushes up from its original location. By using the property
+      'clear:both;' we are
+      forcing this footer (Div element) to start from a new line below.
+    </p>
+  </div>
 
 </body>
 
