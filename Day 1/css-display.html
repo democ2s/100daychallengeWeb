@@ -1,1 +1,123 @@
 
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>CSS Display Property</title>
+  <style>
+    div {
+      color: white;
+    }
+
+    .red {
+      display: block;
+      width: 200px;
+      height: 200px;
+      background-color: red;
+    }
+
+    .green {
+      display: inline;
+      width: 200px;
+      height: 200px;
+      background-color: green;
+    }
+
+    .blue {
+      display: inline-block;
+      width: 200px;
+      height: 200px;
+      background-color: blue;
+    }
+
+    /* Horizontal display */
+    .red-mod-horz {
+      display: inline-block;
+      width: 200px;
+      height: 200px;
+      background-color: red;
+    }
+
+    .green-mod-horz {
+      display: inline-block;
+      width: 200px;
+      height: 200px;
+      background-color: green;
+    }
+
+    .blue-mod-horz {
+      display: inline-block;
+      width: 200px;
+      height: 200px;
+      background-color: blue;
+    }
+
+    /* Vertical display */
+    .red-mod-ver {
+      display: block;
+      width: 200px;
+      height: 200px;
+      background-color: red;
+    }
+
+    .green-mod-ver {
+      display: block;
+      width: 200px;
+      height: 200px;
+      background-color: green;
+    }
+
+    .blue-mod-ver {
+      display: inline-block;
+      width: 200px;
+      height: 200px;
+      background-color: blue;
+    }
+  </style>
+</head>
+
+
+<body>
+  <h1>CSS Display Property</h1>
+  <h2>Explanation</h2>
+  <p>
+  <h3>Summary</h3>
+  <ul>
+    <li>Two types of elements in HTML - Block and inline elements</li>
+    <li>Block level elements occupies entire width of the screen and it doesn't allows other elements (both
+      inline/block) to start next to it in the same line.</li>
+    <li>Inline elements only occupies based on content it occupies</li>
+    <li>But, we can override the above display types. i.e. we can make block level elements behave like inline and vice
+      versa.</li>
+  </ul>
+  <h3>Display Types</h3>
+  <ul>
+    <li>
+      Block: When any element is set as 'Block', it behaves like a block element where no other element can start next
+      to it in the same line. Width and Height can be controlled.
+    </li>
+    <li>Inline: When any element is set as 'Inline', it behaves like inline element where it doesn't occupies the entire
+      width of the screen. Height and Width cannot be controlled. Height and Width is dictated by its content.</li>
+    <li>Inline-Block: When set with this, effectively we can make any element's (especially inline elements)</li> width
+    and height can be controlled and other elements can appear next to it in the same line.
+  </ul>
+
+  </p>
+  <h3>Default behaviour</h3>
+  <div class="red">Red Paragraph </div>
+  <div class="green">Green Paragraph</div>
+  <div class="blue">Blue Paragraph</div>
+
+  <h3> Controlled behaviour: To align all divs (Block level elements) in same line</h3>
+  <div class="red-mod-horz">Red Paragraph </div>
+  <div class="green-mod-horz">Green Paragraph</div>
+  <div class="blue-mod-horz">Blue Paragraph</div>
+
+  <h3> Controlled behaviour: To align all divs (Block level elements) vertically stacking</h3>
+  <div class="red-mod-ver">Red Paragraph </div>
+  <div class="green-mod-ver">Green Paragraph</div>
+  <div class="blue-mod-ver">Blue Paragraph</div>
+
+</body>
+
+</html>
