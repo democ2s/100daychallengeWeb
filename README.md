@@ -1,2 +1,2 @@
-# HTML Portfolio
-Sample Portfolio of HTML projects - Working on Bootcamp files by Angela
+# 100 day challenge - HTML, CSS and JavaScript
+
